@@ -1,0 +1,82 @@
+@import "../../../../assets/colors.scss";
+
+.selling-products__products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.selling-products__info {
+  text-align: center;
+}
+
+.product-thumb__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px 15px;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+}
+
+.product-thumb__img_img-thumbnail {
+  width: 150px;
+  height: 200px;
+}
+
+.product-thumb__fa-star {
+  color: $mustard;
+}
+
+.selling-products__init-title {
+  text-align: center;
+}
+
+.card{
+  width: 250px;
+  height: 400px;
+}
+.card, .selling-card {
+  border: none;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.selling-card{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-price {
+  color: blue;
+}
+
+.btn {
+  margin: 10px 0px;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.products-to-sell {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.input {
+  width: 300px;
+}

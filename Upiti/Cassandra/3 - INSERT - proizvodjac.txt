@@ -1,0 +1,123 @@
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'Graficke kartice', 'XFX');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'Graficke kartice', 'PALIT');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'Procesori', 'AMD');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'Procesori', 'INTEL');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'Maticne ploce', 'MSI');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'Maticne ploce', 'GIGABYTE');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'SSD', 'SAMSUNG');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Racunarske komponente', 'SSD', 'KINGSTON');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Mobilni telefoni', 'Smart', 'SAMSUNG');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Mobilni telefoni', 'Smart', 'XIAOMI');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Mobilni telefoni', 'Smart', 'APPLE');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Mobilni telefoni', 'Obicni', 'ALCATEL');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Mobilni telefoni', 'Obicni', 'NOKIA');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Ves masine', 'MIELE');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Ves masine', 'BOSCH');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Ves masine', 'GORENJE');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Masine za pranje i susenje', 'MIELE');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Masine za pranje i susenje', 'MIDEA');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Elektricni sporeti', 'TESLA');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Elektricni sporeti', 'VOX');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Elektricni sporeti', 'GORENJE');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Mikrotalasne', 'BOSCH');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Mikrotalasne', 'PANASONIC');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Mikrotalasne', 'GORENJE');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Bela tehnika', 'Mikrotalasne', 'CANDY');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Televizori', 'Smart', 'GRUNDIG');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Televizori', 'Smart', 'PHILIPS');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Televizori', 'Smart', 'PANASONIC');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Televizori', 'Obicni', 'TESLA');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Televizori', 'Obicni', 'VOX');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Prenosni racunari', 'Lap top racunari', 'ACER');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Prenosni racunari', 'Lap top racunari', 'LENOVO');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Prenosni racunari', 'Lap top racunari', 'HP');
+
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Prenosni racunari', 'Tableti', 'ALCATEL');
+
+INSERT INTO proizvodjac (kategorija, tip, naziv)
+VALUES('Prenosni racunari', 'Tableti', 'XIAOMI');
+
+
+
+
+
+

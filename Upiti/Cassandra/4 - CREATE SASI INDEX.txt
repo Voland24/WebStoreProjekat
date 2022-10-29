@@ -1,0 +1,12 @@
+CREATE CUSTOM INDEX idx_proizvod_naziv ON proizvod_naziv (naziv) 
+USING 'org.apache.cassandra.index.sasi.SASIIndex' 
+WITH OPTIONS = {'analyzer_class': 'org.apache.cassandra.index.sasi.analyzer.StandardAnalyzer', 'case_sensitive': 'false'};
+
+//I onda izvrsiti:
+SELECT * FROM proizvod_naziv WHERE naziv LIKE 'nesto%';
+
+PROBLEM:
+SELECT * FROM proizvod_naziv WHERE kategorija = 'Mobilni telefoni' 
+and tip = 'Obicni' and naziv LIKE 'NOKIA 5%';
+
+NE RADI BAS LEPO. Vraca i NOKIA 5310 i NOKIA 3310. Mozda je problem zbog brojeva?

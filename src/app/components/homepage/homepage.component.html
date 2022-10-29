@@ -1,0 +1,72 @@
+<jw-modal id="login">
+    <h3>Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" required>
+            </mat-form-field>
+        </div>
+        <button class="btn btn-success my-2" type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+    <button class="btn btn-danger" (click)="closeModalForLogin()">Close</button>
+</jw-modal>
+
+<jw-modal id="register">
+    <h3>Register user</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" minlength="5" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Telefon</mat-label>
+            <input matInput formControlName="telefon" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Ime</mat-label>
+            <input matInput formControlName="ime" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Prezime</mat-label>
+            <input matInput formControlName="prezime" required>
+        </mat-form-field>
+    </div>
+        <button class="btn btn-success my-2" type="submit" [disabled]="!registerForm.valid">Register</button>
+    </form>
+    <button class="btn btn-danger" (click)="closeModalForRegister()">Close</button>
+</jw-modal>
+
+<div class="homepage__container container">
+    <div class="row">
+        <div class="homepage__user-registration" *ngIf="!userLoggedIn">
+            <button class="btn btn-primary" (click)="openModalForLogin()">Log in</button>
+            <span>Don't have an account? Click <a href="#" (click)="openModalForRegister()">here</a>!</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="homepage__popularno">
+            <h3>Popularni proizvodi</h3>
+            <app-product-popularno></app-product-popularno>
+        </div>
+    </div>
+    <div class="row" *ngIf="userRole === 'K'">
+        <div class="homepage__for-you">
+            <app-product-preporuke></app-product-preporuke>
+        </div>
+    </div>
+</div>

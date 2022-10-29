@@ -1,0 +1,92 @@
+<jw-modal id="izmeniProizvodModal">
+    <form [formGroup]="updateForm" (ngSubmit)="updateProizvod()" *ngIf="selectedProizvod">
+        <p>{{selectedProizvod.naziv}}</p>
+        <div class="form-inputs">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Popust</mat-label>
+                <input matInput required formControlName="popust">
+            </mat-form-field>
+        </div>
+        <button class="btn btn-success mb-2" type="submit" [disabled]="!updateForm.valid || !updateForm.dirty"><i class="fas fa-check"></i></button>
+    </form>
+    <button class="btn btn-danger" (click)="closeModal('izmeniProizvodModal')"><i class="fas fa-backspace"></i></button>
+</jw-modal>
+
+<jw-modal id="dodajProizvodModal">
+    <form [formGroup]="addForm" (ngSubmit)="dodajProizvod()">
+        <p>Kreiranje novog proizvoda</p>
+        <div class="form-inputs">
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Kategorija</mat-label>
+                <input matInput required formControlName="kategorija">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Tip</mat-label>
+                <input matInput required formControlName="tip">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Naziv</mat-label>
+                <input matInput required formControlName="naziv">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Cena</mat-label>
+                <input matInput required formControlName="cena">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Proizvodjac</mat-label>
+                <input matInput required formControlName="proizvodjac">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Opis</mat-label>
+                <textarea matInput required formControlName="opis"></textarea>
+            </mat-form-field>
+        </div>
+        <button class="btn btn-success mb-2" type="submit" [disabled]="!addForm.valid"><i class="fas fa-check"></i></button>
+    </form>
+    <button class="btn btn-danger" (click)="closeModal('dodajProizvodModal')"><i class="fas fa-backspace"></i></button>
+</jw-modal>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div [ngClass]="{'col' : !products, 'col-2': products}">
+            <div class="order-products__product-categories">
+                <ul class="order-products__product-categories">
+                    <li class="order-products__category" *ngFor="let category of productCategories;  let i = index" (mouseenter)="toggleSubcategories(i)" (mouseleave)="hideSubcategories(i)">
+                        <h4 class="order-products__category-name">{{category.kategorija}}</h4>
+                        <ul class="order-products__subcategories" *ngIf="isSubcategoryShown[i]">
+                            <li (click)="loadProducts(category.kategorija, tip)" *ngFor="let tip of category.tipovi" class="order-products__subcategory">
+                                {{tip}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-primary" (click)="openModal('dodajProizvodModal')"><i class="fas fa-plus-circle"></i></button>
+            </div>
+        </div>
+    
+        <div class="col-8">
+            <div class="order-products__products">
+                <div class="order-products__product" *ngFor="let product of products | async">
+                    <div class="product-thumb__wrapper card" *ngIf="product">
+                        <img [src]="'http://localhost:5000/' + product.slika" class="img-thumbnail rounded mx-auto d-block img img-fluid product-thumb__img_img-thumbnail">
+                        <h5>{{product.naziv}}</h5>
+                        <p class="product-price">{{product.cena}} rsd</p>
+                        <small><b>Popust: {{product.popust}}%</b></small>
+                        <small>{{product.ocena.toFixed(2)}}<i class="fas fa-star product-thumb__fa-star"></i></small>
+                        <div class="buttons">
+                            <button class="btn btn-warning mx-2 my-2" (click)="openModal('izmeniProizvodModal', product)"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-danger" (click)="obrisiProizvodeIzObeBaze(product)"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+@import "../../../assets/colors.scss";
+
+.product-thumb__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 25px;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+}
+
+.product-thumb__img_img-thumbnail {
+    width: 200px;
+    height: 250px;
+}
+
+.product-thumb__fa-star{
+    color: $mustard;
+}
+
+.product-thumb__product-price{
+  color: blue;
+}
+
+.card{
+  width: 250px;
+  height: 400px;
+}

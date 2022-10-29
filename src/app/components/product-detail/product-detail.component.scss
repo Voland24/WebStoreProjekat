@@ -1,0 +1,74 @@
+@import "../../../assets/colors.scss";
+
+.product-detail__wrapper{
+    display: flex;
+}
+.product_detail__product-card{
+    padding: 20px;
+}
+
+.product-detail__rating_and_price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.product-detail__product-title{
+    text-align: center;
+    color: blue;
+}
+.product-detail__image{
+    width: 350px;
+    height: 350px;
+}
+
+.product-detail__comments{
+    margin-left: 20px;
+}
+
+.product-detail__fa-star{
+    color: $mustard;
+    cursor: pointer;
+    
+    &:hover{
+        color: #947506;
+    }
+}
+
+.product-detail__rating-box{
+    display: flex;
+}
+
+.rating{
+    direction: rtl;
+}
+
+
+.rating .product-detail__fa-star-for-rating{
+    color: $black;
+
+    &:hover{
+        color: $mustard;
+    }
+}
+
+.product-detail__fa-star-for-rating:hover ~ i{
+    color: $mustard;
+}
+
+
+.mat-form-field{
+    min-width: 500px;
+}
+
+.card {
+    border: none;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    width: 50px;
+}

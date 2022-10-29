@@ -1,0 +1,24 @@
+CREATE (n:Prodavnica {grad: 'Nis', adresa: 'Aleksandra Medvedeva 100', radnoVreme: 'PON-PET: 08:00-20:00; SUB: 10:00-14:00', telefon: '018/000-000', email: 'prod1.nis@buyhub.com'});
+
+CREATE (n:Prodavnica {grad: 'Nis', adresa: 'Trg Kralja Milana 100', radnoVreme: 'PON-PET: 08:00-20:00; SUB-NED: 10:00-14:00', telefon: '018/000-001', email: 'prod2.nis@buyhub.com'});
+
+CREATE (n:Prodavnica {grad: 'Beograd', adresa: 'Andre Nikolica 100', radnoVreme: 'PON-PET: 08:00-20:00; SUB: 10:00-15:00', telefon: '011/000-000', email: 'prod1.beograd@buyhub.com'});
+
+CREATE (n:Prodavnica {grad: 'Beograd', adresa: 'Duvanjska 100', radnoVreme: 'PON-PET: 08:00-20:00; SUB: 10:00-16:00', telefon: '011/000-001', email: 'prod2.beograd@buyhub.com'});
+
+CREATE (n:Prodavnica {grad: 'Beograd', adresa: 'Branicevska 100', radnoVreme: 'PON-PET: 08:00-20:00', telefon: '011/000-002', email: 'prod3.beograd@buyhub.com'});
+
+CREATE (n:Prodavnica {grad: 'Novi Sad', adresa: 'Milovana Vidakovica 100', radnoVreme: 'PON-PET: 08:00-20:00; SUB: 10:00-18:00', telefon: '021/000-000', email: 'prod1.novisad@buyhub.com'});
+
+CREATE (n:Prodavnica {grad: 'Novi Sad', adresa: 'Trg Dositeja Obradovica 100', radnoVreme: 'PON-PET: 08:00-20:00; SUB: 10:00-17:00', telefon: '021/000-001', email: 'prod2.novisad@buyhub.com'});
+
+
+
+
+
+
+
+
+
+
+

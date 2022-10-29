@@ -1,0 +1,29 @@
+{
+  "name": "API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cassandra-client": "^0.15.2",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "bcryptjs": "^2.4.3",
+    "cassandra-driver": "*",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "helmet": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "neo4j-driver": "*",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}

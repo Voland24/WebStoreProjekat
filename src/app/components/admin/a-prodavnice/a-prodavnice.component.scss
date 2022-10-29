@@ -1,0 +1,28 @@
+.card {
+  border: none;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.btn {
+  margin: 3px;
+}
+
+.form-inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add-btn{
+  margin: 5px;
+  text-align: center;
+}

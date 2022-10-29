@@ -1,0 +1,30 @@
+@import "../../../assets/colors.scss";
+
+.sidebar__category, .sidebar__subcategory{
+    cursor: pointer;
+}
+.sidebar__product-categories{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-right: 1px solid $black;
+    padding-right: 10px;
+    min-height: 80vh;
+}
+
+.sidebar__subcategories, .sidebar__product-categories{
+    list-style-type: none;
+}
+
+.sidebar__category{
+    border-bottom: 1px solid $black;
+    &:hover{
+        background-color: $baby_powder;
+    }
+}
+
+.sidebar__subcategory{
+    &:hover{
+        color: $red_rufous;
+    }
+}

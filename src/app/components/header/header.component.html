@@ -1,0 +1,93 @@
+<div class="user-header" *ngIf="role=='K'">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand me-3" href="#"><img src="../../../assets/logoWithLettersColoredCut.png" alt="logo" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="" routerLinkActive="active">Pocetna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/about" routerLinkActive="active">O nama</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="toggleCategories()" routerLinkActive="active">Proizvodi</a>
+              </li>
+              <li class="nav-item" *ngIf="username !== ''">
+                <a class="nav-link" routerLink="/transakcije" routerLinkActive="active">Moje transakcije</a>
+              </li>
+        </ul>
+        <ul class="navbar-nav float-end mx-3">
+          <li class="nav-item cart">
+            <a routerLink="/cart"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+        <div class="login-span" *ngIf="username != ''">
+          <span class="header__welcome-text px-3">Zdravo {{username}}</span>
+          <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="prodavac-header" *ngIf="role=='R'">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand me-3" href="#"><img src="../../../assets/logoWithLettersColoredCut.png" alt="logo" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/selling-products" routerLinkActive="active">Proizvodi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/transakcije" routerLinkActive="active">Transakcije</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/order-products" routerLinkActive="active">Narucivanje</a>
+              </li>
+        </ul>
+        <div class="login-span" *ngIf="username != ''">
+          <span class="header__welcome-text px-3">Zdravo {{username}}</span>
+          <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<div class="prodavac-header" *ngIf="role=='A'">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand me-3" href="#"><img src="../../../assets/logoWithLettersColoredCut.png" alt="logo" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/a-proizvodi" routerLinkActive="active">Proizvodi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/transakcije" routerLinkActive="active">Transakcije</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/a-radnici" routerLinkActive="active">Radnici</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/a-prodavnice" routerLinkActive="active">Prodavnice</a>
+              </li>
+        </ul>
+        <span class="header__welcome-text px-3">Zdravo admin</span>
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+</div>

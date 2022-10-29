@@ -1,0 +1,230 @@
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Graficke kartice', naziv: 'AMD RADEON RX580 XFX', cena: 50000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/GRAFICKE_KARTICE/AMD_RADEON_RX580_XFX.jpg', proizvodjac: 'XFX', opis: '8GB 
+DDR5 
+xDP/HDMI/D-DVI-D/256bit/RX-580P8DFD6'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Graficke kartice', naziv: 'PALIT nVidia GeForce RTX 3080 Ti GameRock', cena: 1000000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/GRAFICKE_KARTICE/PALIT_nVidia_GeForce_RTX_3080_Ti_GameRock.jpg', proizvodjac: 'PALIT', opis: '12GB 
+GDDR6X 
+384-bit - NED308T019KB-1020G'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Procesori', naziv: 'AMD Ryzen 5 1600 AF', cena: 20000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/PROCESORI/AMD_Ryzen_5_1600_AF.jpg', proizvodjac: 'AMD', opis: '3.2GHz (3.6GHz) 
+AMD AM4 
+AMD Ryzen 5 
+6core 
+12 threads 
+12nm 
+TDP: 65W'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Procesori', naziv: 'Intel Core i7 12700K', cena: 70000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/PROCESORI/Intel_Core_i7_12700K.jpg', proizvodjac: 'INTEL', opis: '3.6GHz 
+Intel 1700 
+Intel Core i7 
+6core 
+12 threads 
+14nm 
+TDP: 125W'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Procesori', naziv: 'AMD Ryzen 9 5900X', cena: 80000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/PROCESORI/AMD_Ryzen_9_5900X.jpg', proizvodjac: 'AMD', opis: '3.7GHz 
+Gaming 
+AMD AM4 
+AMD Ryzen 9 
+12core 
+24 threads 
+7nm 
+TDP: 105W'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Procesori', naziv: 'Intel Core i7 11700K', cena: 55000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/PROCESORI/Intel_Core_i7_11700K.jpg', proizvodjac: 'INTEL', opis: '3.6GHz 
+Intel 1200 
+Intel Core i7 
+8core 
+16 threads 
+14nm 
+TDP: 125W'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Maticne ploce', naziv: 'MSI MPG B550 GAMING PLUS', cena: 16000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/MATICNE_PLOCE/MSI_MPG_B550_GAMING_PLUS.jpg', proizvodjac: 'MSI', opis: 'AMD 
+AMD AM4 
+AMD B550 
+ATX 
+DDR4 
+Gaming'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Maticne ploce', naziv: 'GIGABYTE Z690 UD', cena: 30000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/MATICNE_PLOCE/GIGABYTE_Z690_UD.jpg', proizvodjac: 'GIGABYTE', opis: 'Intel 
+Intel 1700 
+Intel Z690 
+ATX 
+DDR5 
+Gaming'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'Maticne ploce', naziv: 'MSI B450 TOMAHAWK MAX II', cena: 13000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/MATICNE_PLOCE/MSI_B450_TOMAHAWK_MAX_II.jpg', proizvodjac: 'MSI', opis: 'AMD 
+AMD AM4 
+AMD B450 
+ATX 
+DDR4 
+Gaming'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'SSD', naziv: 'SAMSUNG SSD 970 EVO PLUS 500GB', cena: 12500, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/SSD/SAMSUNG_SSD_970_EVO_PLUS_500GB.jpg', proizvodjac: 'SAMSUNG', opis: '500GB 
+M2 2280 
+PCIe 3.0 
+wr: do 3500 MB/s 
+2.38mm'});
+
+CREATE (n:Proizvod {kategorija: 'Racunarske komponente', tip: 'SSD', naziv: 'KINGSTON KC600 1024GB', cena: 19000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/RACUNARSKE_KOMPONENTE/SSD/KINGSTON_KC600_1024GB.jpg', proizvodjac: 'KINGSTON', opis: '1TB 
+2.5" 
+SATA III 
+wr: do 550MB/s 
+7mm'});
+
+CREATE (n:Proizvod {kategorija: 'Mobilni telefoni', tip: 'Smart', naziv: 'SAMSUNG GALAXY S21 PLUS', cena: 130000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/MOBILNI_TELEFONI/SMART/SAMSUNG_GALAXY_S21_PLUS.jpg', proizvodjac: 'SAMSUNG', opis: '6.7" 
+8GB RAM 
+128GB interna memorija 
+zadnja kamera:  64 Mpix + 12 Mpix + 12 Mpix 
+prednja kamera: 10.0 Mpix 
+kapacitet baterije: 4800mAh 
+rezolucija: 2400x1080'});
+
+CREATE (n:Proizvod {kategorija: 'Mobilni telefoni', tip: 'Smart', naziv: 'XIAOMI MI 8', cena: 40000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/MOBILNI_TELEFONI/SMART/XIAOMI_MI_8.jpg', proizvodjac: 'XIAOMI', opis: '6.21" 
+6GB RAM 
+128GB interna memorija 
+zadnja kamera: 12 Mpix + 12 Mpix 
+prednja kamera: 20.0 Mpix 
+kapacitet baterije: 3400mAh 
+rezolucija: 2248x1080'});
+
+CREATE (n:Proizvod {kategorija: 'Mobilni telefoni', tip: 'Smart', naziv: 'APPLE iPhone 13 Pro Max', cena: 174600, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/MOBILNI_TELEFONI/SMART/APPLE_iPhone_13_Pro_Max.jpg', proizvodjac: 'APPLE', opis: '6.7" - 6GB RAM 
+128GB interna memorija 
+zadnja kamera: 12 Mpix + 12 Mpix + 12 Mpix 
+prednja kamera: 12.0 Mpix 
+kapacitet baterije: 4373mAh 
+rezolucija: 2778x1284'});
+
+CREATE (n:Proizvod {kategorija: 'Mobilni telefoni', tip: 'Obicni', naziv: 'ALCATEL 1066D', cena: 2500, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/MOBILNI_TELEFONI/OBICNI/ALCATEL_1066D.jpg', proizvodjac: 'ALCATEL', opis: 'Dijagonala ekrana: 1.8"
+Interna memorija: 4 + 4 MB
+Zadnja kamera: 0.08 Mpix
+Kapacitet baterije: 400 mAh
+Rezolucija: 160 x 128
+Tip ekrana: TFT'});
+
+CREATE (n:Proizvod {kategorija: 'Mobilni telefoni', tip: 'Obicni', naziv: 'NOKIA 3310', cena: 2500, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/MOBILNI_TELEFONI/OBICNI/NOKIA_3310.jpg', proizvodjac: 'NOKIA', opis: 'Dijagonala ekrana: 2.4"
+Zadnja kamera: 2.0 Mpix
+Kapacitet baterije: 1200 mAh
+Rezolucija: 320 x 240
+Tip ekrana: TFT'});
+
+CREATE (n:Proizvod {kategorija: 'Mobilni telefoni', tip: 'Obicni', naziv: 'NOKIA 5310', cena: 2500, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/MOBILNI_TELEFONI/OBICNI/NOKIA_5310.jpg', proizvodjac: 'NOKIA', opis: 'Dijagonala ekrana: 2.4"
+RAM memorija: Do 768MB
+Interna memorija: 16 MB
+Zadnja kamera: 0.3 Mpix
+Kapacitet baterije: 1200 mAh
+Rezolucija: 320 x 240
+Tip ekrana: TFT'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Ves masine', naziv: 'MIELE WWD120 WCS', cena: 99000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/VES_MASINE/MIELE_WWD120_WCS.jpg', proizvodjac: 'MIELE', opis: 'Energetski razred: A 
+1400 obr/min 
+kapacitet: 8kg'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Ves masine', naziv: 'BOSCH WAX32M40BY', cena: 107000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/VES_MASINE/BOSCH_WAX32M40BY.jpg', proizvodjac: 'BOSCH', opis: 'Energetski razred: C 
+1600 obr/min 
+kapacitet: 9kg'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Ves masine', naziv: 'GORENJE WNEI 74 BS', cena: 39000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/VES_MASINE/GORENJE_WNEI_74_BS.jpg', proizvodjac: 'GORENJE', opis: 'Energetski razred: B 
+1400 obr/min 
+kapacitet: 7kg'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Ves masine', naziv: 'MIELE WCA030WCS D LW', cena: 85000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/VES_MASINE/MIELE_WCA030WCS_D_LW.jpg', proizvodjac: 'MIELE', opis: 'Energetski razred: B 
+1400 obr/min 
+kapacitet pranja: 7kg'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Masine za pranje i susenje', naziv: 'MIELE WTF 115 WCS', cena: 195000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MASINE_ZA_PRANJE_I_SUSENJE/MIELE_WTF_115_WCS.jpg', proizvodjac: 'MIELE', opis: 'Energetski razred: A 
+1600 obr/min 
+kapacitet pranja/susenja: 7kg/4kg'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Masine za pranje i susenje', naziv: 'MIELE WTZH730 WPM', cena: 310000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MASINE_ZA_PRANJE_I_SUSENJE/MIELE_WTZH730_WPM.jpg', proizvodjac: 'MIELE', opis: 'Energetski razred: A 
+1600 obr/min 
+kapacitet pranja/susenja: 8kg/5kg 
+WiFi'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Masine za pranje i susenje', naziv: 'MIDEA MFK80 DU1401B', cena: 70000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MASINE_ZA_PRANJE_I_SUSENJE/MIDEA_MFK80_DU1401B.jpg', proizvodjac: 'MIDEA', opis: 'Energetski razred: E 
+1400 obr/min 
+kapacitet pranja/susenja: 8kg/6kg'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Elektricni sporeti', naziv: 'TESLA CV6400SX', cena: 42000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/ELEKTRICNI_SPORETI/TESLA_CV6400SX.jpg', proizvodjac: 'TESLA', opis: 'Energetski razred: A 
+Vrsta ploce za kuvanje: staklokeramicka 
+Zapremina rerne: 50l'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Elektricni sporeti', naziv: 'VOX CHT5000W', cena: 30000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/ELEKTRICNI_SPORETI/VOX_CHT5000W.jpg', proizvodjac: 'VOX', opis: 'Energetski razred: A 
+Vrsta ploce za kuvanje: staklokeramicka 
+Zapremina rerne: 50l'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Elektricni sporeti', naziv: 'GORENJE E5121WH', cena: 24000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/ELEKTRICNI_SPORETI/GORENJE_E5121WH.jpg', proizvodjac: 'GORENJE', opis: 'Energetski razred: A 
+Vrsta ploce za kuvanje: ringle 
+Zapremina rerne: 68l'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Mikrotalasne', naziv: 'BOSCH FEL023MS2', cena: 21000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MIKROTALASNE/BOSCH_FEL023MS2.jpg', proizvodjac: 'BOSCH', opis: 'Upravljanje: elektronsko 
+Zapremina rerne: 20l'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Mikrotalasne', naziv: 'GORENJE MO4250CLI', cena: 19000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MIKROTALASNE/GORENJE_MO4250CLI.jpg', proizvodjac: 'GORENJE', opis: 'Upravljanje: mehanicko 
+Zapremina rerne: 20l'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Mikrotalasne', naziv: 'PANASONIC NN GD36HMSUG', cena: 25000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MIKROTALASNE/PANASONIC_NN_GD36HMSUG.jpg', proizvodjac: 'PANASONIC', opis: 'Upravljanje: mehanicko 
+Zapremina rerne: 23l'});
+
+CREATE (n:Proizvod {kategorija: 'Bela tehnika', tip: 'Mikrotalasne', naziv: 'CANDY CMG 2071 M', cena: 11500, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/BELA_TEHNIKA/MIKROTALASNE/CANDY_CMG_2071_M.jpg', proizvodjac: 'CANDY', opis: 'Upravljanje: mehanicko 
+Zapremina rerne: 20l'});
+
+CREATE (n:Proizvod {kategorija: 'Televizori', tip: 'Smart', naziv: 'GRUNDIG 65GDU7500B SMART', cena: 84000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/TELEVIZORI/SMART/GRUNDIG_65GDU7500B_SMART.jpg', proizvodjac: 'GRUNDIG', opis: 'Tip ekrana: LED 
+Dijagonala: 65" 
+Rezolucija: 4K Ultra HD 
+Digitalni tjuner: DVB-T/T2/C/S2'});
+
+CREATE (n:Proizvod {kategorija: 'Televizori', tip: 'Smart', naziv: 'PHILIPS 70PUS7505 SMART', cena: 110000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/TELEVIZORI/SMART/PHILIPS_70PUS7505_SMART.jpg', proizvodjac: 'PHILIPS', opis: 'Tip ekrana: LED 
+Dijagonala: 70" 
+Rezolucija: 4K Ultra HD 
+Digitalni tjuner: DVB-T/T2/C/S/S2 
+OS: Saphi 
+Procesor za sliku: P5 Perfect Picture Engine'});
+
+CREATE (n:Proizvod {kategorija: 'Televizori', tip: 'Smart', naziv: 'PANASONIC TX-49HX940E SMART', cena: 92000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/TELEVIZORI/SMART/PANASONIC_TX-49HX940E_SMART.jpg', proizvodjac: 'PANASONIC', opis: 'Tip ekrana: LED 
+Dijagonala: 49" 
+Rezolucija: 4K Ultra HD 
+Digitalni tjuner: DVB-T2/C/S2 
+OS: my Home Screen 5.0'});
+
+CREATE (n:Proizvod {kategorija: 'Televizori', tip: 'Obicni', naziv: 'TESLA 32T312BH', cena: 19000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/TELEVIZORI/OBICNI/TESLA_32T312BH.jpg', proizvodjac: 'TESLA', opis: 'Tip ekrana: LED 
+Dijagonala: 32" 
+Rezolucija: 720p HD Ready 
+Digitalni tjuner: DVB-T/T2/C/S/S2'});
+
+CREATE (n:Proizvod {kategorija: 'Televizori', tip: 'Obicni', naziv: 'VOX 32DSQGB', cena: 16000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/TELEVIZORI/OBICNI/VOX_32DSQGB.jpg', proizvodjac: 'VOX', opis: 'Tip ekrana: LED 
+Dijagonala: 32" 
+Rezolucija: 720p HD Ready 
+Digitalni tjuner:DVB-T/T2/C/S/S2'});
+
+CREATE (n:Proizvod {kategorija: 'Prenosni racunari', tip: 'Lap top racunari', naziv: 'ACER Aspire 3 A315-23', cena: 66000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/PRENOSNI_RACUNARI/LAP_TOP_RACUNARI/ACER_Aspire_3_A315-23.jpg', proizvodjac: 'ACER', opis: 'Model procesora: AMD Picasso Ryzen 5 3500U do 3.7GHz
+Dijagonala ekrana: 15.6"
+Tip graficke karte:Integrisana Radeon RX Vega 8
+RAM memorija: 4GB
+HDD SSD: 256GB SSD'});
+
+CREATE (n:Proizvod {kategorija: 'Prenosni racunari', tip: 'Lap top racunari', naziv: 'LENOVO IdeaPad 3 14ADA05', cena: 66000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/PRENOSNI_RACUNARI/LAP_TOP_RACUNARI/LENOVO_IdeaPad_3_14ADA05.jpg', proizvodjac: 'LENOVO', opis: 'Model procesora: AMD Picasso Ryzen 5 3500U do 3.7GHz
+Dijagonala ekrana: 14"
+Tip graficke karte: Integrisana Radeon Vega 8
+RAM memorija: 8GB
+HDD SSD: 512GB SSD'});
+
+CREATE (n:Proizvod {kategorija: 'Prenosni racunari', tip: 'Lap top racunari', naziv: 'HP 250 G7-1F3J0EA', cena: 66000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/PRENOSNI_RACUNARI/LAP_TOP_RACUNARI/HP_250_G7-1F3J0EA.jpg', proizvodjac: 'HP', opis: 'Model procesora: Intel Core i5-1035G1 procesor, 6M Cache, up to 3.60 GHz
+Dijagonala ekrana: 15.6"
+Tip graficke karte: GeForce MX110
+RAM memorija: 8GB
+HDD SSD: 512GB SSD'});
+
+CREATE (n:Proizvod {kategorija: 'Prenosni racunari', tip: 'Tableti', naziv: 'ALCATEL 1T', cena: 12000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/PRENOSNI_RACUNARI/TABLETI/ALCATEL_1T.jpg', proizvodjac: 'ALCATEL', opis: 'Dijagonala ekrana: 7"
+RAM memorija: 1GB
+Interna memorija: 8GB
+Internet konekcija: WiFi
+Rezolucija: 1024 x 600
+Baterija: Lithium ion 2580mAh'});
+
+CREATE (n:Proizvod {kategorija: 'Prenosni racunari', tip: 'Tableti', naziv: 'XIAOMI Pad 5', cena: 40000, popust: 0, zbirOcena: 0, brojOcena: 0, brojKupovina: 0, slika: 'slike/PRENOSNI_RACUNARI/TABLETI/XIAOMI_Pad_5.jpg', proizvodjac: 'XIAOMI', opis: 'Dijagonala ekrana: 11"
+RAM memorija: 6GB
+Interna memorija: 128GB
+Internet konekcija: WiFi
+Rezolucija: 2560 x 1600
+Baterija: 8720 mAh'});

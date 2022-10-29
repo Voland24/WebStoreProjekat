@@ -1,0 +1,36 @@
+<div class="product-list__wrapper">
+  <div class="product-list__manufacturers">
+    <p class="product-list__manufacturers-title">Prodizvodjaci</p>
+    <mat-checkbox *ngFor="let proizvodjac of sviProizvodjaci | async" (change)="filterByProizvodjaci($event.checked ,proizvodjac.naziv)">{{proizvodjac.naziv}}</mat-checkbox>
+  </div>
+  <div class="product-list__container">
+    <div class="product-list__search-filters container">
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Filter by: </mat-label>
+            <mat-select [(ngModel)]="selectedFilterOption" (ngModelChange)="filterBySelectedOption()">
+              <mat-option *ngFor="let filter of filters" [value]="filter">
+                {{filter}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <form #searchForm='ngForm' class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Pretraga po nazivu" aria-label="Search" name="searchValue" [(ngModel)]="searchValue">
+            <button class="btn btn-warning me-2" type="reset"><i class="fas fa-undo-alt"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="product-list__product-wrapper" *ngIf="products">
+      <div *ngFor="let product of products | search:searchValue">
+        <app-product-thumb
+          [product]="product"
+          class="product-list__product"
+        ></app-product-thumb>
+      </div>
+    </div>
+  </div>
+</div>

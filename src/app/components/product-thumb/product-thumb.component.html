@@ -1,0 +1,7 @@
+<div class="product-thumb__wrapper card" *ngIf="product" (click)="showProductDetail()">
+    <img [src]="'http://localhost:5000/' + product.slika" class="img-thumbnail rounded mx-auto d-block img img-fluid product-thumb__img_img-thumbnail">
+    <h5>{{product.naziv}}</h5>
+    <p class="product-thumb__product-price">{{product.cena}} rsd</p>
+    <small *ngIf="product.ocena">{{product.ocena.toFixed(2)}}<i class="fas fa-star product-thumb__fa-star"></i></small>
+    <small *ngIf="product.popust"><b>Popust: {{product.popust}}%</b></small>
+</div>

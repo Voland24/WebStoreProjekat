@@ -1,0 +1,164 @@
+<div class="transakcije__wrapper container-fluid">
+    <div class="row">
+        <div class="transakcije__pretraga col-4" *ngIf="userRole==='R' || userRole ==='A'">
+            <p>Pretraga offline transakcija</p>
+            <form [formGroup]="transakcijeForm" (ngSubmit)="pretraziTransakcije()" class="transakcije__pretraga-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Godina</mat-label>
+                    <input matInput formControlName="godina" required>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Kvartal</mat-label>
+                    <input matInput formControlName="kvartal" required>
+                </mat-form-field>
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>Mesec</mat-label>
+                    <mat-select formControlName="mesec" required>
+                    <mat-option *ngFor="let mesec of meseci" [value]="mesec">
+                        {{mesec}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!--PRODAVAC DEO-->
+                <mat-form-field class="example-full-width" appearance="fill" *ngIf="userRole==='R'">
+                    <mat-label>Grad</mat-label>
+                    <input matInput required [disabled]="true" [value]="gradRadnika">
+                </mat-form-field>
+    
+                <mat-form-field class="example-full-width" appearance="fill" *ngIf="userRole==='R'">
+                    <mat-label>Adresa</mat-label>
+                    <input matInput required [disabled]="true" [value]="adresaRadnika">
+                </mat-form-field>
+                <!--PRODAVAC DEO GOTOV-->
+
+                <!--ADMIN DEO-->
+                <mat-form-field appearance="fill" *ngIf="userRole==='A'">
+                    <mat-label>Gradovi</mat-label>
+                    <mat-select formControlName="grad" required (selectionChange)="izaberiGrad()">
+                    <mat-option *ngFor="let grad of gradovi" [value]="grad">
+                        {{grad}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!--DINAMICKI SE UCITAVAJU ADRESE NAKON STO SE SELEKTUJE GRAD-->
+                <mat-form-field appearance="fill" *ngIf="userRole==='A'">
+                    <mat-label>Adrese</mat-label>
+                    <mat-select formControlName="adresa" required [disabled]="!gradIzabran">
+                    <mat-option *ngFor="let adresa of adrese" [value]="adresa">
+                        {{adresa}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!--ADMIN DEO GOTOV-->
+
+                <button class="btn btn-primary" type="submit" [disabled]="!transakcijeForm.valid">Pretrazi</button>
+            </form>
+        </div>
+        <div class="transakcije__pregled col-8" *ngIf="(userRole === 'R' || userRole === 'A') && transakcije">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Online</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Kupljeni proizvodi</th>
+                    <th scope="col">Ukupna cena (rsd)</th>
+                    <th scope="col">Vreme kupovine</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let transakcija of transakcije; let i = index">
+                        <th scope="row">{{i}}</th>
+                        <td *ngIf="transakcija.online">Da</td>
+                        <td *ngIf="!transakcija.online">Ne</td>
+                        <td>{{transakcija.usernameKorisnika}}</td>
+                        <td>{{transakcija.kupljeniProizvodi}}</td>
+                        <td>{{transakcija.ukupnaCena}}</td>
+                        <td>{{transakcija.vremeKupovine}}</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="transakcije__pregled col-8" *ngIf="userRole === 'K' && transakcije">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Slika</th>
+                    <th scope="col">Naziv</th>
+                    <th scope="col">Cena</th>
+                    <th scope="col">Datum kupovine</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let transakcija of transakcije; let i = index">
+                        <th scope="row">{{i}}</th>
+                        <td (click)="odvediNaStranicuProizvoda(transakcija)"><img [src]="'http://localhost:5000/' + transakcija.slika"></td>
+                        <td>{{transakcija.naziv}}</td>
+                        <td>{{transakcija.cena}}</td>
+                        <td>{{transakcija.DatumKupovine}}</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <hr>
+    <div class="row" *ngIf="userRole ==='A'">
+        <div class="transakcije__pretraga col-4">
+            <p>Pretraga online transakcija</p>
+            <form [formGroup]="onlineTransakcijeForm" (ngSubmit)="pretraziOnlineTransakcije()" class="transakcije__pretraga-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Godina</mat-label>
+                    <input matInput formControlName="godina" required>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Kvartal</mat-label>
+                    <input matInput formControlName="kvartal" required>
+                </mat-form-field>
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>Mesec</mat-label>
+                    <mat-select formControlName="mesec" required>
+                    <mat-option *ngFor="let mesec of meseci" [value]="mesec">
+                        {{mesec}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button class="btn btn-primary" type="submit" [disabled]="!onlineTransakcijeForm.valid">Pretrazi</button>
+            </form>
+        </div>
+
+        <div class="transakcije__pregled col-8" *ngIf="onlineTransakcije">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Online</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Kupljeni proizvodi</th>
+                    <th scope="col">Ukupna cena (rsd)</th>
+                    <th scope="col">Vreme kupovine</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let transakcija of onlineTransakcije; let i = index">
+                        <th scope="row">{{i}}</th>
+                        <td *ngIf="transakcija.online">Da</td>
+                        <td *ngIf="!transakcija.online">Ne</td>
+                        <td>{{transakcija.usernameKorisnika}}</td>
+                        <td>{{transakcija.kupljeniProizvodi}}</td>
+                        <td>{{transakcija.ukupnaCena}}</td>
+                        <td>{{transakcija.vremeKupovine}}</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

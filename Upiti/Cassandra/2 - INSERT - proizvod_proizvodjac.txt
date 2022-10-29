@@ -1,0 +1,372 @@
+//RACUNARSKE KOMPONENTE:------------------------------------------------------------------------------------------
+//1) GRAFICKE------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)
+VALUES('Racunarske komponente', 'Graficke kartice', 'AMD RADEON RX580 XFX', 50000, 0, 'XFX', 
+'8GB 
+DDR5 
+xDP/HDMI/D-DVI-D/256bit/RX-580P8DFD6', 
+'slike/RACUNARSKE_KOMPONENTE/GRAFICKE_KARTICE/AMD_RADEON_RX580_XFX.jpg', 0);
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                           
+VALUES('Racunarske komponente', 'Graficke kartice', 'PALIT nVidia GeForce RTX 3080 Ti GameRock', 1000000, 0, 'PALIT', 
+'12GB 
+GDDR6X 
+384-bit - NED308T019KB-1020G', 
+'slike/RACUNARSKE_KOMPONENTE/GRAFICKE_KARTICE/PALIT_nVidia_GeForce_RTX_3080_Ti_GameRock.jpg', 0);   
+
+//2) PROCESORI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                          
+VALUES('Racunarske komponente', 'Procesori', 'AMD Ryzen 5 1600 AF', 20000, 0, 
+'AMD', '3.2GHz (3.6GHz) 
+AMD AM4 
+AMD Ryzen 5 
+6core 
+12 threads 
+12nm 
+TDP: 65W', 
+'slike/RACUNARSKE_KOMPONENTE/PROCESORI/AMD_Ryzen_5_1600_AF.jpg', 0);        
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                        
+VALUES('Racunarske komponente', 'Procesori', 'Intel Core i7 12700K', 70000, 0, 
+'INTEL', '3.6GHz 
+Intel 1700 
+Intel Core i7 
+6core 
+12 threads 
+14nm 
+TDP: 125W', 
+'slike/RACUNARSKE_KOMPONENTE/PROCESORI/Intel_Core_i7_12700K.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Racunarske komponente', 'Procesori', 'AMD Ryzen 9 5900X', 80000, 0, 
+'AMD', '3.7GHz 
+Gaming 
+AMD AM4 
+AMD Ryzen 9 
+12core 
+24 threads 
+7nm 
+TDP: 105W', 
+'slike/RACUNARSKE_KOMPONENTE/PROCESORI/AMD_Ryzen_9_5900X.jpg', 0);     
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Racunarske komponente', 'Procesori', 'Intel Core i7 11700K', 55000, 0, 
+'INTEL', '3.6GHz 
+Intel 1200 
+Intel Core i7 
+8core 
+16 threads 
+14nm 
+TDP: 125W', 
+'slike/RACUNARSKE_KOMPONENTE/PROCESORI/Intel_Core_i7_11700K.jpg', 0);      
+
+//3) MATICNE------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Racunarske komponente', 'Maticne ploce', 'MSI MPG B550 GAMING PLUS', 16000, 0, 
+'MSI', 'AMD 
+AMD AM4 
+AMD B550 
+ATX 
+DDR4 
+Gaming', 
+'slike/RACUNARSKE_KOMPONENTE/MATICNE_PLOCE/MSI_MPG_B550_GAMING_PLUS.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Racunarske komponente', 'Maticne ploce', 'GIGABYTE Z690 UD', 30000, 0, 
+'GIGABYTE', 'Intel 
+Intel 1700 
+Intel Z690 
+ATX 
+DDR5 
+Gaming', 
+'slike/RACUNARSKE_KOMPONENTE/MATICNE_PLOCE/GIGABYTE_Z690_UD.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Racunarske komponente', 'Maticne ploce', 'MSI B450 TOMAHAWK MAX II', 13000, 0, 
+'MSI', 'AMD 
+AMD AM4 
+AMD B450 
+ATX 
+DDR4 
+Gaming', 
+'slike/RACUNARSKE_KOMPONENTE/MATICNE_PLOCE/MSI_B450_TOMAHAWK_MAX_II.jpg', 0); 
+
+//4) SSD------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Racunarske komponente', 'SSD', 'SAMSUNG SSD 970 EVO PLUS 500GB', 12500, 0, 
+'SAMSUNG', '500GB 
+M2 2280 
+PCIe 3.0 
+wr: do 3500 MB/s 
+2.38mm', 
+'slike/RACUNARSKE_KOMPONENTE/SSD/SAMSUNG_SSD_970_EVO_PLUS_500GB.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Racunarske komponente', 'SSD', 'KINGSTON KC600 1024GB', 19000, 0, 
+'KINGSTON', '1TB 
+2.5" 
+SATA III 
+wr: do 550MB/s 
+7mm', 
+'slike/RACUNARSKE_KOMPONENTE/SSD/KINGSTON_KC600_1024GB.jpg', 0); 
+
+//TELEFONI:------------------------------------------------------------------------------------------
+//SMART TELEFONI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Mobilni telefoni', 'Smart', 'SAMSUNG GALAXY S21 PLUS', 130000, 0, 
+'SAMSUNG', '6.7" 
+8GB RAM 
+128GB interna memorija 
+zadnja kamera:  64 Mpix + 12 Mpix + 12 Mpix 
+prednja kamera: 10.0 Mpix 
+kapacitet baterije: 4800mAh 
+rezolucija: 2400x1080', 
+'slike/MOBILNI_TELEFONI/SMART/SAMSUNG_GALAXY_S21_PLUS.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Mobilni telefoni', 'Smart', 'XIAOMI MI 8', 40000, 0, 
+'XIAOMI', '6.21" 
+6GB RAM 
+128GB interna memorija 
+zadnja kamera: 12 Mpix + 12 Mpix 
+prednja kamera: 20.0 Mpix 
+kapacitet baterije: 3400mAh 
+rezolucija: 2248x1080', 
+'slike/MOBILNI_TELEFONI/SMART/XIAOMI_MI_8.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Mobilni telefoni', 'Smart', 'APPLE iPhone 13 Pro Max', 174600, 0, 
+'APPLE', '6.7" - 6GB RAM 
+128GB interna memorija 
+zadnja kamera: 12 Mpix + 12 Mpix + 12 Mpix 
+prednja kamera: 12.0 Mpix 
+kapacitet baterije: 4373mAh 
+rezolucija: 2778x1284', 
+'slike/MOBILNI_TELEFONI/SMART/APPLE_iPhone_13_Pro_Max.jpg', 0); 
+
+//OBICNI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Mobilni telefoni', 'Obicni', 'ALCATEL 1066D', 2500, 0, 
+'ALCATEL', 'Dijagonala ekrana: 1.8"
+Interna memorija: 4 + 4 MB
+Zadnja kamera: 0.08 Mpix
+Kapacitet baterije: 400 mAh
+Rezolucija: 160 x 128
+Tip ekrana: TFT', 
+'slike/MOBILNI_TELEFONI/OBICNI/ALCATEL_1066D.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Mobilni telefoni', 'Obicni', 'NOKIA 3310', 2500, 0, 
+'NOKIA', 'Dijagonala ekrana: 2.4"
+Zadnja kamera: 2.0 Mpix
+Kapacitet baterije: 1200 mAh
+Rezolucija: 320 x 240
+Tip ekrana: TFT', 
+'slike/MOBILNI_TELEFONI/OBICNI/NOKIA_3310.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Mobilni telefoni', 'Obicni', 'NOKIA 5310', 2500, 0, 
+'NOKIA', 'Dijagonala ekrana: 2.4"
+RAM memorija: Do 768MB
+Interna memorija: 16 MB
+Zadnja kamera: 0.3 Mpix
+Kapacitet baterije: 1200 mAh
+Rezolucija: 320 x 240
+Tip ekrana: TFT', 
+'slike/MOBILNI_TELEFONI/OBICNI/NOKIA_5310.jpg', 0); 
+
+//BELA TEHNIKA:------------------------------------------------------------------------------------------
+//VES MASINE------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Bela tehnika', 'Ves masine', 'MIELE WWD120 WCS', 99000, 0, 
+'MIELE', 'Energetski razred: A 
+1400 obr/min 
+kapacitet: 8kg', 
+'slike/BELA_TEHNIKA/VES_MASINE/MIELE_WWD120_WCS.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Bela tehnika', 'Ves masine', 'BOSCH WAX32M40BY', 107000, 0, 
+'BOSCH', 'Energetski razred: C 
+1600 obr/min 
+kapacitet: 9kg', 
+'slike/BELA_TEHNIKA/VES_MASINE/BOSCH_WAX32M40BY.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                              
+VALUES('Bela tehnika', 'Ves masine', 'GORENJE WNEI 74 BS', 39000, 0, 
+'GORENJE', 'Energetski razred: B 
+1400 obr/min 
+kapacitet: 7kg', 
+'slike/BELA_TEHNIKA/VES_MASINE/GORENJE_WNEI_74_BS.jpg', 0);
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                              
+VALUES('Bela tehnika', 'Ves masine', 'MIELE WCA030WCS D LW', 85000, 0, 
+'MIELE', 'Energetski razred: B 
+1400 obr/min 
+kapacitet pranja: 7kg', 
+'slike/BELA_TEHNIKA/VES_MASINE/MIELE_WCA030WCS_D_LW.jpg', 0);  
+
+//MASINE ZA PRANJE I SUSENJE------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Bela tehnika', 'Masine za pranje i susenje', 'MIELE WTF 115 WCS', 195000, 0, 
+'MIELE', 'Energetski razred: A 
+1600 obr/min 
+kapacitet pranja/susenja: 7kg/4kg', 
+'slike/BELA_TEHNIKA/MASINE_ZA_PRANJE_I_SUSENJE/MIELE_WTF_115_WCS.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                              
+VALUES('Bela tehnika', 'Masine za pranje i susenje', 'MIELE WTZH730 WPM', 310000, 0, 
+'MIELE', 'Energetski razred: A 
+1600 obr/min 
+kapacitet pranja/susenja: 8kg/5kg 
+WiFi', 
+'slike/BELA_TEHNIKA/MASINE_ZA_PRANJE_I_SUSENJE/MIELE_WTZH730_WPM.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                           
+VALUES('Bela tehnika', 'Masine za pranje i susenje', 'MIDEA MFK80 DU1401B', 70000, 0, 
+'MIDEA', 'Energetski razred: E 
+1400 obr/min 
+kapacitet pranja/susenja: 8kg/6kg', 
+'slike/BELA_TEHNIKA/MASINE_ZA_PRANJE_I_SUSENJE/MIDEA_MFK80_DU1401B.jpg', 0); 
+
+//ELEKTRICNI SPORETI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Bela tehnika', 'Elektricni sporeti', 'TESLA CV6400SX', 42000, 0, 
+'TESLA', 'Energetski razred: A 
+Vrsta ploce za kuvanje: staklokeramicka 
+Zapremina rerne: 50l', 
+'slike/BELA_TEHNIKA/ELEKTRICNI_SPORETI/TESLA_CV6400SX.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                           
+VALUES('Bela tehnika', 'Elektricni sporeti', 'VOX CHT5000W', 30000, 0, 
+'VOX', 'Energetski razred: A 
+Vrsta ploce za kuvanje: staklokeramicka 
+Zapremina rerne: 50l', 
+'slike/BELA_TEHNIKA/ELEKTRICNI_SPORETI/VOX_CHT5000W.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Bela tehnika', 'Elektricni sporeti', 'GORENJE E5121WH', 24000, 0, 
+'GORENJE', 'Energetski razred: A 
+Vrsta ploce za kuvanje: ringle 
+Zapremina rerne: 68l', 
+'slike/BELA_TEHNIKA/ELEKTRICNI_SPORETI/GORENJE_E5121WH.jpg', 0); 
+
+//MIKROTALASNE------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Bela tehnika', 'Mikrotalasne', 'BOSCH FEL023MS2', 21000, 0, 
+'BOSCH', 'Upravljanje: elektronsko 
+Zapremina rerne: 20l', 
+'slike/BELA_TEHNIKA/MIKROTALASNE/BOSCH_FEL023MS2.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                              
+VALUES('Bela tehnika', 'Mikrotalasne', 'GORENJE MO4250CLI', 19000, 0, 
+'GORENJE', 'Upravljanje: mehanicko 
+Zapremina rerne: 20l', 
+'slike/BELA_TEHNIKA/MIKROTALASNE/GORENJE_MO4250CLI.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Bela tehnika', 'Mikrotalasne', 'PANASONIC NN GD36HMSUG', 25000, 0, 
+'PANASONIC', 'Upravljanje: mehanicko 
+Zapremina rerne: 23l', 
+'slike/BELA_TEHNIKA/MIKROTALASNE/PANASONIC_NN_GD36HMSUG.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                             
+VALUES('Bela tehnika', 'Mikrotalasne', 'CANDY CMG 2071 M', 11500, 0, 
+'CANDY', 'Upravljanje: mehanicko 
+Zapremina rerne: 20l', 
+'slike/BELA_TEHNIKA/MIKROTALASNE/CANDY_CMG_2071_M.jpg', 0); 
+
+//TELEVIZORI:------------------------------------------------------------------------------------------
+//SMART TELEVIZORI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Televizori', 'Smart', 'GRUNDIG 65GDU7500B SMART', 84000, 0, 
+'GRUNDIG', 'Tip ekrana: LED 
+Dijagonala: 65" 
+Rezolucija: 4K Ultra HD 
+Digitalni tjuner: DVB-T/T2/C/S2', 
+'slike/TELEVIZORI/SMART/GRUNDIG_65GDU7500B_SMART.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Televizori', 'Smart', 'PHILIPS 70PUS7505 SMART', 110000, 0, 
+'PHILIPS', 'Tip ekrana: LED 
+Dijagonala: 70" 
+Rezolucija: 4K Ultra HD 
+Digitalni tjuner: DVB-T/T2/C/S/S2 
+OS: Saphi 
+Procesor za sliku: P5 Perfect Picture Engine', 
+'slike/TELEVIZORI/SMART/PHILIPS_70PUS7505_SMART.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Televizori', 'Smart', 'PANASONIC TX-49HX940E SMART', 92000, 0, 
+'PANASONIC', 'Tip ekrana: LED 
+Dijagonala: 49" 
+Rezolucija: 4K Ultra HD 
+Digitalni tjuner: DVB-T2/C/S2 
+OS: my Home Screen 5.0', 
+'slike/TELEVIZORI/SMART/PANASONIC_TX-49HX940E_SMART.jpg', 0); 
+
+//OBICNI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Televizori', 'Obicni', 'TESLA 32T312BH', 19000, 0, 
+'TESLA', 'Tip ekrana: LED 
+Dijagonala: 32" 
+Rezolucija: 720p HD Ready 
+Digitalni tjuner: DVB-T/T2/C/S/S2', 
+'slike/TELEVIZORI/OBICNI/TESLA_32T312BH.jpg', 0);
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Televizori', 'Obicni', 'VOX 32DSQGB', 16000, 0, 
+'VOX', 'Tip ekrana: LED 
+Dijagonala: 32" 
+Rezolucija: 720p HD Ready 
+Digitalni tjuner:DVB-T/T2/C/S/S2', 
+'slike/TELEVIZORI/OBICNI/VOX_32DSQGB.jpg', 0); 
+
+//PRENOSNI RACUNARI:------------------------------------------------------------------------------------------
+//LAP TOPOVI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Prenosni racunari', 'Lap top racunari', 'ACER Aspire 3 A315-23', 66000, 0, 
+'ACER', 'Model procesora: AMD Picasso Ryzen 5 3500U do 3.7GHz
+Dijagonala ekrana: 15.6"
+Tip graficke karte:Integrisana Radeon RX Vega 8
+RAM memorija: 4GB
+HDD SSD: 256GB SSD', 
+'slike/PRENOSNI_RACUNARI/LAP_TOP_RACUNARI/ACER_Aspire_3_A315-23.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Prenosni racunari', 'Lap top racunari', 'LENOVO IdeaPad 3 14ADA05', 66000, 0, 
+'LENOVO', 'Model procesora: AMD Picasso Ryzen 5 3500U do 3.7GHz
+Dijagonala ekrana: 14"
+Tip graficke karte: Integrisana Radeon Vega 8
+RAM memorija: 8GB
+HDD SSD: 512GB SSD', 
+'slike/PRENOSNI_RACUNARI/LAP_TOP_RACUNARI/LENOVO_IdeaPad_3_14ADA05.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Prenosni racunari', 'Lap top racunari', 'HP 250 G7-1F3J0EA', 66000, 0, 
+'HP', 'Model procesora: Intel Core i5-1035G1 procesor, 6M Cache, up to 3.60 GHz
+Dijagonala ekrana: 15.6"
+Tip graficke karte: GeForce MX110
+RAM memorija: 8GB
+HDD SSD: 512GB SSD', 
+'slike/PRENOSNI_RACUNARI/LAP_TOP_RACUNARI/HP_250_G7-1F3J0EA.jpg', 0); 
+
+//TABLETI------------------------------------------------------------------------------------------
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Prenosni racunari', 'Tableti', 'ALCATEL 1T', 12000, 0, 
+'ALCATEL', 'Dijagonala ekrana: 7"
+RAM memorija: 1GB
+Interna memorija: 8GB
+Internet konekcija: WiFi
+Rezolucija: 1024 x 600
+Baterija: Lithium ion 2580mAh', 
+'slike/PRENOSNI_RACUNARI/TABLETI/ALCATEL_1T.jpg', 0); 
+
+INSERT INTO proizvod_proizvodjac (kategorija, tip, naziv, cena, ocena, proizvodjac, opis, slika, popust)                                                                            
+VALUES('Prenosni racunari', 'Tableti', 'XIAOMI Pad 5', 40000, 0, 
+'XIAOMI', 'Dijagonala ekrana: 11"
+RAM memorija: 6GB
+Interna memorija: 128GB
+Internet konekcija: WiFi
+Rezolucija: 2560 x 1600
+Baterija: 8720 mAh', 
+'slike/PRENOSNI_RACUNARI/TABLETI/XIAOMI_Pad_5.jpg', 0); 

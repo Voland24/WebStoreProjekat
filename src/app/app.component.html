@@ -1,0 +1,12 @@
+<div class="body">
+  <app-header class="header"></app-header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2" *ngIf="isSidebarShown | async">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col"><router-outlet></router-outlet></div>
+    </div>
+  </div>
+  <app-footer class="footer"></app-footer>
+</div>

@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <h3 class="title">Ovo je vasa korpa: </h3>
+    <div *ngIf="cartProducts && cartProducts.length > 0">
+        <div class="header__cart">
+            <div class="col products-to-sell">
+                <div class="product-to-sell" *ngFor="let element of cartProducts">
+                    <div class="product-details card">
+                        <span class="font-weight-bold text-primary">{{element.product.naziv}} </span> 
+                        <span>{{element.product.cena}} rsd</span> 
+                        <span *ngIf="element.product.popust"><b>Popust: {{element.product.popust}} %</b></span>
+                        <p>Trenutno za kupovinu: {{element.brojProizvoda}}</p>
+                        <span><button class="btn btn-danger" (click)="removeFromCart(element.product)"><i class="fas fa-trash"></i></button></span>
+                    </div>
+                </div>
+            </div>
+            <p>Ukupna cena: <b>{{ukupnaCena}} rsd</b></p>
+            </div>
+            <div>
+                <button class="btn btn-success mx-3" (click)="kupiProizvode()" [disabled]="ukupnaCena <= 0"><i class="fas fa-receipt"></i></button>
+            </div>
+    </div>
+    
+    <div *ngIf="cartProducts && cartProducts.length <= 0">
+        <h3 class="title-danger">Trenutno nemate nijedan proizvod u korpi</h3>
+    </div>
+</div>
+

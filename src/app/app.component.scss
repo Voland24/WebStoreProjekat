@@ -1,0 +1,19 @@
+@import '~ngx-toastr/toastr';
+
+.body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  min-height: 50px;
+}
+.footer {
+  min-height: 50px;
+  margin-top: auto;
+}
+
+// .container-fluid {
+//   display: flex;
+// }

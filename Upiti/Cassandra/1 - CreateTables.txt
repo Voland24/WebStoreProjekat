@@ -1,0 +1,161 @@
+//1) Proizvod - pretraga po nazivu------------------------------------------------
+CREATE TABLE proizvod_naziv
+(
+    kategorija text,
+    tip text,
+    naziv text,
+    cena float,
+    ocena float,     
+    proizvodjac text,                                      
+    opis text,                                                
+    slika text,
+    popust int, //u procentima
+
+    PRIMARY KEY ((kategorija, tip), naziv)
+)                                                 
+WITH
+  bloom_filter_fp_chance=0.01
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};
+
+//2) Proizvod - sortiranje po ceni + eventualna pretraga po nazivu------------------------------------------------
+CREATE TABLE proizvod_cenanaziv
+(
+    kategorija text,             
+    tip text,              
+    naziv text,
+    cena float,
+    ocena float,                                    
+    proizvodjac text,                                      
+    opis text,                                                
+    slika text,
+    popust int, //u procentima
+
+    PRIMARY KEY ((kategorija, tip), cena, proizvodjac, naziv)		//Ipak dodat i naziv
+)                                                 
+WITH
+  bloom_filter_fp_chance=0.01
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};
+
+//3) Proizvod - sortiranje po oceni + eventualna pretraga po nazivu------------------------------------------------
+CREATE TABLE proizvod_ocenanaziv
+(
+    kategorija text,             
+    tip text,              
+    naziv text,
+    cena float,
+    ocena float,                                    
+    proizvodjac text,                                      
+    opis text,                                                
+    slika text,
+    popust int, //u procentima
+
+    PRIMARY KEY ((kategorija, tip), ocena, proizvodjac, naziv)		//Ipak dodat i naziv
+)                                                 
+WITH                          
+  bloom_filter_fp_chance=0.01                                     
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};
+
+//4) Proizvod - po proizvodjacu + eventualna pretraga po nazivu------------------------------------------------
+CREATE TABLE proizvod_proizvodjac
+(
+    kategorija text,             
+    tip text,              
+    naziv text,
+    cena float,
+    ocena float,                                    
+    proizvodjac text,                                      
+    opis text,                                                
+    slika text,
+    popust int, //u procentima
+
+    PRIMARY KEY ((kategorija, tip), proizvodjac, naziv)	//Ovde moze da ostane naziv samo da bi sortiralo leksikografski
+)                                                 
+WITH                          
+  bloom_filter_fp_chance=0.01                                     
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};
+
+//5) Proizvod - izbacivanje top x stvari koje su na popustu------------------------------------------------
+CREATE TABLE proizvod_popust
+(
+    kategorija text,             
+    tip text,              
+    naziv text,
+    cena float,
+    ocena float,                                    
+    proizvodjac text,                                      
+    opis text,                                                
+    slika text,
+    popust int, //u procentima
+
+    PRIMARY KEY ((kategorija, tip), popust, naziv)		//Ipak dodat i naziv
+)                                                 
+WITH                          
+  bloom_filter_fp_chance=0.01                                     
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};
+
+//6) Transakcija------------------------------------------------
+CREATE TABLE transakcija
+(
+    godina int,
+    kvartal int,
+    mesec text,    //ili mozda int
+    online Boolean,
+    //"imeProdavnice" text,
+    grad text,
+    adresa text,
+    "kupljeniProizvodi" text,    //svi proizvodi koji su kupljeni
+    "usernameKorisnika" text,
+    "ukupnaCena" float,
+    "vremeKupovine" text,     //text umesto timestamp
+                         
+    PRIMARY KEY ((godina, kvartal, mesec), online, grad, adresa, "vremeKupovine", "usernameKorisnika")   //"imeProdavnice")
+)
+WITH
+  bloom_filter_fp_chance=0.01
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};
+
+//7) Popularno------------------------------------------------
+CREATE TABLE popularno
+(
+    popularno text,
+    kategorija text,
+    tip text,
+    naziv text,
+    ocena float,                        
+    cena float,   
+    slika text,	//dodata slika                         
+
+    PRIMARY KEY (popularno, naziv, ocena)	//Ipak "naziv, ocena" kao clustering key, a ne samo ocena
+)
+WITH
+  bloom_filter_fp_chance=0.01
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};     
+
+//8) Proizvodjaci------------------------------------------------
+CREATE TABLE proizvodjac
+(
+    kategorija text,
+    tip text,
+    naziv text,
+            
+    PRIMARY KEY ((kategorija, tip), naziv)
+)                               
+WITH
+  bloom_filter_fp_chance=0.01
+  AND compaction={ 'class' : 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy' }
+  AND compression={ 'sstable_compression' : 'org.apache.cassandra.io.compress.LZ4Compressor' }
+  AND caching={'keys':'ALL', 'rows_per_partition':'NONE'};     

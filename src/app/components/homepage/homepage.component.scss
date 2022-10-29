@@ -1,0 +1,17 @@
+@import "../../../assets/colors.scss";
+
+.homepage__container{
+    padding-top: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage__popularno
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+}

@@ -1,0 +1,10 @@
+<div class="product-popularno__wrapper">
+      <div class="product-popularno__product-wrapper">
+        <div *ngFor="let product of products | async">
+          <app-product-thumb
+            [product]="product"
+            class="product-popularno__product"
+          ></app-product-thumb>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,31 @@
+@import "../../../assets/colors.scss";
+
+.product-list__wrapper{
+    display: flex;
+    margin-top: 10px;
+}
+
+.product-list__container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.product-list__product-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-list__manufacturers{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.product-list__search-filters{
+    display: flex;
+}
+
+.product-list__manufacturers-title{
+    border-bottom: 1px solid $black;
+}

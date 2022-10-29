@@ -1,0 +1,37 @@
+
+.card {
+    border: none;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.radnik-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.btn{
+    margin: 3px;
+}
+
+.radnik-ime{
+    color: blue;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-btn{
+    text-align: center;
+}

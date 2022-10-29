@@ -1,0 +1,89 @@
+<jw-modal id="updateProdavnicaModal">
+    <form [formGroup]="updateForm" (ngSubmit)="updateProdavnica()" *ngIf="selectedProdavnica">
+        <div class="form-inputs">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Grad</mat-label>
+                <input matInput required disabled [value]="selectedProdavnica.grad">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Adresa</mat-label>
+                <input matInput required disabled [value]="selectedProdavnica.adresa">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Radno vreme</mat-label>
+                <input matInput formControlName="radnoVreme" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Telefon</mat-label>
+                <input matInput formControlName="telefon" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" required>
+            </mat-form-field>
+        </div>
+        <button class="btn btn-success" type="submit" [disabled]="!updateForm.valid || !updateForm.dirty"><i class="fas fa-check"></i></button>
+    </form>
+    <button class="btn btn-danger" (click)="closeModal('updateProdavnicaModal')"><i class="fas fa-backspace"></i></button>
+</jw-modal>
+
+
+<jw-modal id="dodajProdavnicuModal">
+    <form [formGroup]="addForm" (ngSubmit)="dodajProdavnicu()">
+        <div class="form-inputs">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Grad</mat-label>
+                <input matInput required formControlName="grad">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Adresa</mat-label>
+                <input matInput required formControlName="adresa">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Radno vreme</mat-label>
+                <input matInput formControlName="radnoVreme" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Telefon</mat-label>
+                <input matInput formControlName="telefon" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" required>
+            </mat-form-field>
+        </div>
+        <button class="btn btn-success" type="submit" [disabled]="!addForm.valid"><i class="fas fa-check"></i></button>
+    </form>
+    <button class="btn btn-danger" (click)="closeModal('dodajProdavnicuModal')"><i class="fas fa-backspace"></i></button>
+</jw-modal>
+
+<div class="container">
+    <div class="add-btn">
+        <button class="btn btn-primary" (click)="openModal('dodajProdavnicuModal')"><i class="fas fa-plus-circle"></i></button>
+    </div>
+    <div class="row">
+            <div class="radnik card" *ngFor="let prodavnica of prodavnice | async">
+                <div class="radnik-wrapper">
+                    <div class="radnik-opste">
+                        <p class="radnik-ime">{{prodavnica.adresa}}, {{prodavnica.grad}}</p>
+                        <small>Email: {{prodavnica.email}}</small>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="col">
+                        <button class="btn btn-warning" (click)="openModal('updateProdavnicaModal', prodavnica)"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger" (click)="izbrisiProdavnicu(prodavnica)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>

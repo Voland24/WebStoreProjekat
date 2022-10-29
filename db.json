@@ -1,0 +1,104 @@
+{
+  "product-categories": [
+    {
+      "kategorija": "computers",
+      "tipovi": ["Laptops", "PCs", "Accessories", "processors"]
+    },
+    {
+      "kategorija": "washing machines",
+      "tipovi": ["LG", "Samsung", "Bosch"]
+    },
+    {
+      "kategorija": "consoles",
+      "tipovi": ["Playstation", "Xbox", "Atari"]
+    },
+    {
+      "kategorija": "gaming chairs",
+      "tipovi": ["Razer", "Bloody", "Scorpion"]
+    },
+    {
+      "kategorija": "hairdryers",
+      "tipovi": ["LG", "Samsung", "Bosch"]
+    },    
+    {
+      "kategorija": "cameras",
+      "tipovi": ["Digital", "Analog"]
+    },
+    {
+      "kategorija": "guitars",
+      "tipovi": ["Fender", "Gibson"]
+    },
+    {
+      "kategorija": "mobile",
+      "tipovi": ["regular", "smart"]
+    }
+  ],
+  "product-list":[
+    {
+      "kategorija": "computers",
+      "tip": "processors",
+      "naziv": "Ryzen 5",
+      "cena": 300,
+      "ocena": 3.9,
+      "slika": "../../../assets/slike/RACUNARSKE_KOMPONENTE/PROCESORI/AMD_Ryzen_5_1600_AF.jpg",
+      "opis": "This is a great processor",
+      "proizvodjac": "AMD",
+      "popust": 0
+    },
+    {
+      "kategorija": "mobile",
+      "tip": "smart",
+      "naziv": "Xaomi Mi 8",
+      "cena": 200,
+      "ocena": 3.4,
+      "slika": "../../../assets/slike/MOBILNI_TELEFONI/SMART/XIAOMI_MI_8.jpg",
+      "opis": "This is a good phone",
+      "proizvodjac": "Xiaomi",
+      "popust": 0
+    },
+    {
+      "kategorija": "mobile",
+      "tip": "smart",
+      "naziv": "Iphone 13",
+      "cena": 900,
+      "ocena": 4.9,
+      "slika": "../../../assets/slike/MOBILNI_TELEFONI/SMART/APPLE_iPhone_13_Pro_Max.jpg",
+      "opis": "This is a great phone",
+      "proizvodjac": "Apple",
+      "popust": 0
+    },
+    {
+      "kategorija": "mobile",
+      "tip": "smart",
+      "naziv": "Samsung Galaxy S21",
+      "cena": 600,
+      "ocena": 5.0,
+      "slika": "../../../assets/slike/MOBILNI_TELEFONI/SMART/SAMSUNG_GALAXY_S21_PLUS.jpg",
+      "opis": "Great!",
+      "proizvodjac": "Samsung",
+      "popust": 0
+    },
+    {
+      "kategorija": "mobile",
+      "tip": "regular",
+      "naziv": "Nokia 3310",
+      "cena": 50,
+      "ocena": 2.9,
+      "slika": "../../../assets/slike/MOBILNI_TELEFONI/OBICNI/NOKIA_3310.jpg",
+      "opis": "The old reliable",
+      "proizvodjac": "Nokia",
+      "popust": 0
+    },
+    {
+      "kategorija": "mobile",
+      "tip": "regular",
+      "naziv": "Nokia 5310",
+      "cena": 60,
+      "ocena": 3.0,
+      "slika": "../../../assets/slike/MOBILNI_TELEFONI/OBICNI/NOKIA_5310.jpg",
+      "opis": "The old but gold",
+      "proizvodjac": "Nokia",
+      "popust": 0
+    }
+  ]
+}

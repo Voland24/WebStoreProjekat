@@ -1,0 +1,31 @@
+@import "../../../assets/colors.scss";
+
+.nav-item{
+    cursor: pointer;
+}
+
+.fa-shopping-cart{
+    color: white;
+
+    &:hover{
+       color: lightgray; 
+    }
+}
+
+ul{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.header__welcome-text{
+    color: $white;
+}
+
+.active{
+    color: $white;
+}

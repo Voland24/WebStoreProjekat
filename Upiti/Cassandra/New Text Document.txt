@@ -1,0 +1,7 @@
+treba instalirati cqlsh sa pip install cqlsh valjda
+ali je potrebno da je py verzija 2.7 (valjda)
+
+pozicionirati se u bin folder cassandre nakon sto je startovan server
+>cqlsh
+>uneti komandu za kreiranje keyspace-a
+>refreshovati nosqlviewer

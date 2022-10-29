@@ -1,0 +1,42 @@
+<form #searchForm='ngForm' class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Pretraga po nazivu" aria-label="Search" name="searchValue" [(ngModel)]="searchValue">
+    <button class="btn btn-warning me-2" type="reset"><i class="fas fa-undo-alt"></i></button>
+  </form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="selling-products__products" *ngIf="products">
+                <div class="selling-products__product" *ngFor="let element of products | searchProizvodRadnik:searchValue">
+                    <div class="product-thumb__wrapper card" *ngIf="element.proizvod" (click)="addToSellList(element.proizvod)">
+                        <img [src]="'http://localhost:5000/' + element.proizvod.slika" class="img-thumbnail rounded mx-auto d-block img img-fluid product-thumb__img_img-thumbnail">
+                        <h5>{{element.proizvod.naziv}}</h5>
+                        <p class="product-price">{{element.proizvod.cena}} rsd</p>
+                        <small *ngIf="element.proizvod.brojOcena > 0">{{(element.proizvod.zbirOcena / element.proizvod.brojOcena).toFixed(2)}}<i class="fas fa-star product-thumb__fa-star"></i></small>
+                        <small *ngIf="element.proizvod.brojOcena == 0">Nema ocenu <i class="fas fa-star product-thumb__fa-star"></i></small>
+                        <small *ngIf="element.proizvod.popust"><b>Popust: {{element.proizvod.popust}} %</b></small>     
+                        <small>Trenutno na stanju: {{element.brojProizvoda}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 products-to-sell" *ngIf="productsForSelling">
+            <h4 *ngIf="productsForSelling.length > 0">Ovo je lista proizvoda za prodaju</h4>
+            <div class="product-to-sell" *ngFor="let element of productsForSelling">
+                <div class="product-details selling-card">
+                    <span class="font-weight-bold text-primary">{{element.product.naziv}} </span> <span>{{element.product.cena}} rsd</span>
+                    <p>Trenutno za kupovinu: {{element.brojProizvoda}}</p>
+                    <button class="btn btn-danger" (click)="reduceNumberFromSellList(element.product)"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            <form class="example-form">
+                <mat-form-field class="input" appearance="fill">
+                  <mat-label>Username korisnika (opciono)</mat-label>
+                  <input matInput [formControl]="usernameKorisnika" class="input">
+                </mat-form-field>
+            </form>
+            <button class="btn btn-primary" (click)="kupiProizvode()">Kupi</button>
+        </div>
+    </div>
+</div>
+

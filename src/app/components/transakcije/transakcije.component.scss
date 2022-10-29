@@ -1,0 +1,26 @@
+@import "../../../assets/colors.scss";
+
+.transakcije__wrapper{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.transakcije__pretraga-form{
+    display: flex;
+    flex-direction: column;    
+}
+.transakcije__pregled{
+    overflow-y: auto;
+    height: 80vh;
+}
+img{
+    width: 50px;
+    height: 70px;
+    &:hover{
+        cursor: pointer;
+        border-bottom: 1px solid black;
+    }
+}
+.transakcije__pretraga{
+    width: 15vw;
+}

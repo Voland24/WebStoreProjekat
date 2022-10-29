@@ -1,0 +1,61 @@
+<jw-modal id="modal">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Zelite da narucite: </h4>
+                <div class="order-card card" *ngIf="productForOrdering">
+                    <img [src]="'http://localhost:5000/' + productForOrdering.slika" class="img-thumbnail rounded mx-auto d-block img img-fluid">
+                    <small>{{productForOrdering.naziv}}</small>
+                </div>
+            </div>
+            <div class="col">
+                <form>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Broj proizvoda koji zelite da narucite</mat-label>
+                      <input matInput placeholder="Ex. 4" [formControl]="numberToOrder" type="number" required>
+                    </mat-form-field>
+                </form>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="order-products__buttons">
+                <button class="btn btn-success mx-3" (click)="orderThisProduct(numberToOrder.value)">Naruci</button>
+                <button class="btn btn-danger" (click)="closeOrderModal('modal')">Nazad</button>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+
+<div class="container fluid">
+    <div class="row">
+        <div [ngClass]="{'col' : !products, 'col-4': products}">
+            <div class="order-products__product-categories">
+                <ul class="order-products__product-categories">
+                    <li class="order-products__category" *ngFor="let category of productCategories;  let i = index" (mouseenter)="toggleSubcategories(i)" (mouseleave)="hideSubcategories(i)">
+                        <h4 class="order-products__category-name">{{category.kategorija}}</h4>
+                        <ul class="order-products__subcategories" *ngIf="isSubcategoryShown[i]">
+                            <li (click)="loadProducts(category.kategorija, tip)" *ngFor="let tip of category.tipovi" class="order-products__subcategory">
+                                {{tip}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="col-8">
+            <div class="order-products__products">
+                <div class="order-products__product" *ngFor="let product of products | async">
+                    <div class="product-thumb__wrapper card" *ngIf="product" (click)="openModalForOrder(product, 'modal')">
+                        <img [src]="'http://localhost:5000/' + product.slika" class="img-thumbnail rounded mx-auto d-block img img-fluid product-thumb__img_img-thumbnail">
+                        <h5>{{product.naziv}}</h5>
+                        <p class="product-price">{{product.cena}} rsd</p>
+                        <small>{{product.ocena.toFixed(2)}}<i class="fas fa-star product-thumb__fa-star"></i></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

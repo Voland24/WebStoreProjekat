@@ -1,0 +1,5 @@
+CREATE (n:Radnik {username: 'radnik.todor.kalezic', password: '$2b$10$AVzg6ZSchbxrSoU2Q.rahOgbOy6knppsHh2ylRHzEsrpIrQ3RQnE.', ime: 'Todor', prezime: 'Kalezic'});
+
+CREATE (n:Radnik {username: 'radnik.petra.milisavljevic', password: '$2b$10$5BybLWPmUgG1Pz486jxU5Oki.KVGf15QuTzahS4c8adZ2tDo9U.NC', ime: 'Petra', prezime: 'Milisavljevic'});
+
+CREATE (n:Radnik {username: 'radnik.luna.mladenovic', password: '$2b$10$PmRHwhLyGcaH54kLTa8bJeGG2dU0J1kiKdAIcLwvcjHnCiTY3LBzu', ime: 'Luna', prezime: 'Mladenovic'});

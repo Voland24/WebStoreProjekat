@@ -1,0 +1,17 @@
+CREATE (n:Korisnik {email: 'marko.njusic@yahoo.com', username: 'marko.njusic', password: '$2b$10$l747urTd2eYO10F22zlzvOp5JeJxtWzMP83PlJS2/.e6KE.d2twfm', telefon: '060-000-000', ime: 'Marko', prezime: 'Njusic'});
+
+CREATE (n:Korisnik {email: 'darko.janjic@yahoo.com', username: 'darko.janjic', password: '$2b$10$qlfyy/PE5bm13vX./x7oUu.svJXeYXV7tdwFE8tp1MKj3EFxe3JwW', telefon: '060-000-001', ime: 'Darko', prezime: 'Janjic'});
+
+CREATE (n:Korisnik {email: 'jelisaveta.djordjevic@yahoo.com', username: 'jelisaveta.djordjevic', password: '$2b$10$qeHAJxOZDOIU499GB0yOTe932YIcj/3RUwtO4uUfqmjMIeqoYGLla', telefon: '060-000-002', ime: 'Jelisaveta', prezime: 'Djordjevic'});
+
+CREATE (n:Korisnik {email: 'darja.adamovic@yahoo.com', username: 'darja.adamovic', password: '$2b$10$cjkZ85zW58FxmO5/zMYyg.f9VSKnM4AGgo7CiGJfXtheDQ9uq4w3y', telefon: '060-000-003', ime: 'Darja', prezime: 'Adamovic'});
+
+CREATE (n:Korisnik {email: 'dragoslav.jeftic@yahoo.com', username: 'dragoslav.jeftic', password: '$2b$10$uvcfHN/3hiOfNkUHcHff9.PK7Qn5jj09aJ3xLmZsm6eHrsWeWb9tq', telefon: '060-000-004', ime: 'Dragoslav', prezime: 'Jeftic'});
+
+CREATE (n:Korisnik {email: 'jelena.bogdanovic@yahoo.com', username: 'jelena.bogdanovic', password: '$2b$10$dFAxkqAR2NsoO6BAITViJOBpU8zXtmWH7Y2jCVnJtVQ.88qUwxT6W', telefon: '060-000-005', ime: 'Jelena', prezime: 'Bogdanovic'});
+
+CREATE (n:Korisnik {email: 'djordje.dobrosavljevic@yahoo.com', username: 'djordje.dobrosavljevic', password: '$2b$10$O40xLNfahIXc2H1I.b0dTeXKNQIcCFxLMsde9w5ufvEb8FQl.qi46', telefon: '060-000-006', ime: 'Djordje', prezime: 'Dobrosavljevic'});
+
+CREATE (n:Korisnik {email: 'sasa.novkovic@yahoo.com', username: 'sasa.novkovic', password: '$2b$10$xdKs/3HGhYpUvUrwSrESGudQ3BIaZmGLJyytveqbBaJ8DX051oF6C', telefon: '060-000-007', ime: 'Sasa', prezime: 'Novkovic'});
+
+CREATE (n:Korisnik {email: 'bogdan.petrov@yahoo.com', username: 'bogdan.petrov', password: '$2b$10$qKCEF64ZhSRn.KYsTx3rWO4UjzIiZtbh38Z3TWPOIo0.nghwvAlb.', telefon: '060-000-008', ime: 'Bogdan', prezime: 'Petrov'});

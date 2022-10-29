@@ -1,0 +1,10 @@
+<ul class="sidebar__product-categories">
+    <li class="sidebar__category" *ngFor="let category of productCategories;  let i = index" (mouseenter)="toggleSubcategories(i)" (mouseleave)="hideSubcategories(i)">
+        <h4 class="sidebar__category-name">{{category.kategorija}}</h4>
+        <ul class="sidebar__subcategories" *ngIf="isSubcategoryShown[i]">
+            <li (click)="moveToProductList(category.kategorija, tip)" *ngFor="let tip of category.tipovi" class="sidebar__subcategory">
+                {{tip}}
+            </li>
+        </ul>
+    </li>
+</ul>

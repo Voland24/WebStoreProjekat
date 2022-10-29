@@ -1,0 +1,51 @@
+<div class="product-detail__wrapper" *ngIf="product">
+    <div class="product_detail__product-card card">
+        <h4 class="product-detail__product-title">{{product.naziv}}</h4>
+        <img [src]="'http://localhost:5000/' + product.slika" alt="picture" class="img img-fluid rounded mx-auto d-block product-detail__image">
+        <div class="product-detail__rating_and_price">
+            <h4>Cena: {{product.cena}} rsd</h4>
+            <div class="product-detail__rating-box">
+                <h5 *ngIf="!clickedOnRate">Ocena: {{product.ocena.toFixed(2)}}<i class="fas fa-star product-detail__fa-star" data-bs-toggle="tooltip" data-bs-placement="top" title="Rate this product" (click)="openRating()"></i></h5>
+                <div class="rating" *ngIf="clickedOnRate">
+                    <p>Izaberite zeljenu ocenu</p>
+                    <i class="fas fa-star product-detail__fa-star-for-rating" (click)="rateProduct(5)"></i>
+                    <i class="fas fa-star product-detail__fa-star-for-rating" (click)="rateProduct(4)"></i>
+                    <i class="fas fa-star product-detail__fa-star-for-rating" (click)="rateProduct(3)"></i>
+                    <i class="fas fa-star product-detail__fa-star-for-rating" (click)="rateProduct(2)"></i>
+                    <i class="fas fa-star product-detail__fa-star-for-rating" (click)="rateProduct(1)"></i>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success" (click)="addToCart()"><i class="fas fa-cart-plus"></i></button>
+        <hr>
+        <div class="product-detail__description">
+            <h5>Opis:</h5>
+            <p>{{product.opis}}</p>
+            <h5>Proizvodjac:</h5>
+            <p>{{product.proizvodjac}}</p>
+        </div>
+    </div>
+    <div class="product-detail__comments">
+        <form #commentForm='ngForm' (submit)="leaveComment()">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Ostavite komentar</mat-label>
+                <textarea matInput placeholder="Ex. Ovo je super proizvod!" [formControl]="userComment" [maxlength]="100" required></textarea>
+            </mat-form-field>
+            <button class="btn btn-success mx-3" type="submit" [disabled]="!userComment.valid"><i class="fas fa-share"></i></button>
+        </form>
+        <div class="product-detail__other-comments">
+            <p *ngIf="!comments">Ovde bi se prikazali komentari da ih ima</p>
+            <h4>Komentari:</h4>
+            <div class="card product-detail__card" *ngFor="let comment of comments | async">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="user d-flex flex-row align-items-center">
+                        <span><small class="font-weight-bold text-primary">{{comment.username}} </small> 
+                        <small class="font-weight-bold">{{comment.komentar}}</small>
+                    </span> 
+                </div>
+                <small class="mx-2"><i class="fas fa-star product-detail__fa-star"></i>{{comment.ocena.toFixed(2)}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
